@@ -1,7 +1,12 @@
 import React from 'react';
+import SideNav from '../../layouts/SideNav';
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <SideNav />
+    </>
+  );
 };
 
 export default Home;
