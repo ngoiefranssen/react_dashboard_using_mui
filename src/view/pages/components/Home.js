@@ -7,6 +7,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import AccordionDash from './AccordionDash';
+import BarChart from '../../charts/BarChart';
 // const SideNav = React.lazy(() => import('../layouts/SideNav'));
 
 const Home = () => {
@@ -79,7 +80,6 @@ const Home = () => {
               <Grid item xs={4}>
                 <Stack spacing={2}>
                   <Card sx={{ maxWidth: 345 }}>
-                    {/* <CardContent> */}
                     <Stack spacing={2} direction="row">
                       <div className="icon_style">
                         <StorefrontIcon />
@@ -90,10 +90,8 @@ const Home = () => {
                         <span className="title_sub_price">Total incomes</span>
                       </div>
                     </Stack>
-                    {/* </CardContent> */}
                   </Card>
                   <Card sx={{ maxWidth: 345 }} className="icon_style">
-                    {/* <CardContent> */}
                     <Stack spacing={2} direction="row">
                       <div className="icon_style_black">
                         <StorefrontIcon />
@@ -104,7 +102,6 @@ const Home = () => {
                         <span className="title_sub_price">Total incomes</span>
                       </div>
                     </Stack>
-                    {/* </CardContent> */}
                   </Card>
                 </Stack>
               </Grid>
@@ -115,7 +112,9 @@ const Home = () => {
             <Grid container spacing={2}>
               <Grid item xs={8}>
                 <Card sx={{ height: 60 + 'vh' }}>
-                  <CardContent></CardContent>
+                  <CardContent>
+                    <BarChart />
+                  </CardContent>
                 </Card>
               </Grid>
               <Grid item xs={4}>

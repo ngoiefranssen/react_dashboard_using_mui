@@ -8,5 +8,3 @@ const appStore = set => ({
 
 const appStore_ = persist(appStore, { name: 'my_app_store' });
 export const useAppStore = create(appStore);
-
-// 12:16

@@ -68,9 +68,7 @@ const Drawer = styled(MuiDrawer, {
 
 const SideNav = () => {
   const theme = useTheme();
-  // const [open, setOpen] = React.useState();
 
-  // const updateOpen = useAppStore(state => state.updateOpen);
   const open = useAppStore(state => state.dopen);
   const navigate = useNavigate();
 
@@ -120,7 +118,34 @@ const SideNav = () => {
             disablePadding
             sx={{ display: 'block' }}
             onClick={() => {
-              navigate('/about');
+              navigate('/user');
+            }}
+          >
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                <SettingsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Users" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem
+            disablePadding
+            sx={{ display: 'block' }}
+            onClick={() => {
+              navigate('/analytic');
             }}
           >
             <ListItemButton
@@ -139,9 +164,13 @@ const SideNav = () => {
               >
                 <RoundaboutLeftIcon />
               </ListItemIcon>
-              <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText
+                primary="Analytics"
+                sx={{ opacity: open ? 1 : 0 }}
+              />
             </ListItemButton>
           </ListItem>
+
           <ListItem
             disablePadding
             sx={{ display: 'block' }}
