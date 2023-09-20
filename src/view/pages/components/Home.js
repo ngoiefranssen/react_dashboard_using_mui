@@ -8,6 +8,7 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import AccordionDash from './AccordionDash';
 import BarChart from '../../charts/BarChart';
+import CountUp from 'react-countup';
 // const SideNav = React.lazy(() => import('../layouts/SideNav'));
 
 const Home = () => {
@@ -36,7 +37,7 @@ const Home = () => {
                         component="div"
                         sx={{ color: '#ffffff' }}
                       >
-                        $570.00
+                        €<CountUp delay={0.3} end={3970} duration={0.5} />
                       </Typography>
                       <Typography
                         gutterBottom
@@ -63,7 +64,7 @@ const Home = () => {
                         component="div"
                         sx={{ color: '#ffffff' }}
                       >
-                        $975.00
+                        €<CountUp delay={0.3} end={7790} duration={0.5} />
                       </Typography>
                       <Typography
                         gutterBottom
@@ -85,7 +86,7 @@ const Home = () => {
                         <StorefrontIcon />
                       </div>
                       <div className="allpadding">
-                        <span className="title_price">$273k</span>
+                        <span className="title_price">€273k</span>
                         <br />
                         <span className="title_sub_price">Total incomes</span>
                       </div>
@@ -97,7 +98,7 @@ const Home = () => {
                         <StorefrontIcon />
                       </div>
                       <div className="allpadding">
-                        <span className="title_price">$273k</span>
+                        <span className="title_price">€273k</span>
                         <br />
                         <span className="title_sub_price">Total incomes</span>
                       </div>

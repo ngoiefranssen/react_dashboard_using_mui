@@ -5,6 +5,7 @@ import SideNav from '../layouts/SideNav';
 import GeolocationChart from '../../charts/GeolocationChart';
 import PieChart from '../../charts/PieChart';
 import HyBarchart from '../../charts/HyBarchart';
+import CountUp from 'react-countup';
 
 const Analytics = () => {
   return (
@@ -35,7 +36,7 @@ const Analytics = () => {
                           component="div"
                           sx={{ color: '#f0fcfc' }}
                         >
-                          $27.75
+                          €<CountUp delay={0.3} end={1750} duration={0.4} />
                         </Typography>
                         <Typography
                           variant="body2"
@@ -65,7 +66,7 @@ const Analytics = () => {
                           component="div"
                           sx={{ color: '#f0fcfc' }}
                         >
-                          $27.75
+                          €<CountUp delay={0.5} end={3370} duration={0.7} />
                         </Typography>
                         <Typography
                           variant="body2"
@@ -94,7 +95,7 @@ const Analytics = () => {
                           component="div"
                           sx={{ color: '#f0fcfc' }}
                         >
-                          $27.75
+                          €<CountUp delay={0.7} end={2790} duration={0.8} />
                         </Typography>
                         <Typography
                           variant="body2"
@@ -124,7 +125,7 @@ const Analytics = () => {
                           component="div"
                           sx={{ color: '#f0fcfc' }}
                         >
-                          $27.75
+                          €<CountUp delay={0.3} end={7790} duration={0.5} />
                         </Typography>
                         <Typography
                           variant="body2"
