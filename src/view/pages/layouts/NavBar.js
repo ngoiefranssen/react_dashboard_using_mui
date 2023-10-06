@@ -68,7 +68,7 @@ const NavBar = () => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const setOpen = useAppStore(state => state.updateOpen);
-  const dOpen = useAppStore(state => state.dopen);
+  const dOpen = useAppStore(state => state.dIsOpen);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);

@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import { CurrencyRupeeIcon } from '@mui/icons-material';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 // import { getDoc, getDocs } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import { addDoc } from 'firebase/firestore';
@@ -18,7 +18,7 @@ import { useAppStore } from '../../AppStore';
 
 const AddProduct = ({
   closeEvent,
-  getAllElementsProduct,
+  getAllElementsProducts,
   empRefCollection,
 }) => {
   const [name, setName] = useState('');
@@ -64,7 +64,7 @@ const AddProduct = ({
       category: category,
       date: String(new Date()),
     });
-    getAllElementsProduct();
+    getAllElementsProducts();
     closeEvent();
     Swal.fire('Submitted', 'You file has been submitted.', 'success');
   };

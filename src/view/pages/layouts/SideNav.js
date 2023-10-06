@@ -69,7 +69,7 @@ const Drawer = styled(MuiDrawer, {
 const SideNav = () => {
   const theme = useTheme();
 
-  const open = useAppStore(state => state.dopen);
+  const open = useAppStore(state => state?.dIsOpen);
   const navigate = useNavigate();
 
   return (

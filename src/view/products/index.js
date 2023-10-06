@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
   Autocomplete,
   Box,
@@ -19,7 +20,9 @@ import {
 import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import * as React from 'react';
 import { db } from '../../firebase-config';
-import { EditIcon, DeleteIcon, AddCircleIcon } from '@mui/icons-material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import Swal from 'sweetalert2';
 import AddProduct from './AddProduct';
 import { useAppStore } from '../../AppStore';
@@ -128,7 +131,7 @@ const ListingProduct = () => {
           <Box sx={style}>
             <AddProduct
               closeEvent={handleClose}
-              getAllElementsProduct={getAllElementsProducts}
+              getAllElementsProducts={getAllElementsProducts}
               empRefCollection={empRefCollection}
             />
           </Box>

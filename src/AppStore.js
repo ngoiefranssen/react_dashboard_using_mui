@@ -2,10 +2,10 @@ import create from 'zustand';
 import { persist } from 'zustand/middleware';
 
 const appStore = set => ({
-  dopen: true,
+  dIsOpen: true,
   data: [],
   setData: data => set(state => ({ data: data })),
-  updateOpen: dopen => set(state => ({ dopen: dopen })),
+  updateOpen: dIsOpen => set(state => ({ dIsOpen: dIsOpen })),
 });
 
 appStore = persist(appStore, { name: 'my_app_store' });

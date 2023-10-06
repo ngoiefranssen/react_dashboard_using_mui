@@ -2,8 +2,8 @@ import { Box } from '@mui/material';
 import React from 'react';
 import SideNav from '../layouts/SideNav';
 import NavBar from '../layouts/NavBar';
-import ListingProduct from '../../products/ListingProduct';
 // const SideNav = React.lazy(() => import('../layouts/SideNav'));
+import ListingProduct from '../../products/index';
 
 const Products = () => {
   return (

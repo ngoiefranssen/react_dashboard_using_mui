@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
   Box,
   Button,
@@ -9,13 +10,13 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import { CurrencyRupeeIcon } from '@mui/icons-material';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import Swal from 'sweetalert2';
-import { addDoc, doc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc } from 'firebase/firestore';
 import { useAppStore } from '../../AppStore';
 import { db } from '../../firebase-config';
 
-const ModifyProduct = ({ closeEventClose, formId, getAllElementsProduct }) => {
+const ModifyProduct = ({ closeEventClose, formId, getAllElementsProducts }) => {
   const [name, setName] = useState('');
   const [category, setCategory] = useState('');
   const [price, setPrice] = useState(0);
@@ -61,7 +62,7 @@ const ModifyProduct = ({ closeEventClose, formId, getAllElementsProduct }) => {
       date: String(new Date()),
     };
     await updateDoc(productModifyFindId, newFieldsModify);
-    getAllElementsProduct();
+    getAllElementsProducts();
     closeEventClose();
     Swal.fire('Submitted', 'You file has been updated.', 'success');
   };
